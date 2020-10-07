@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Wed Oct 07 06:03:09 PDT 2020
+OS\ Name=Linux
+OS\ Version=5.4.0-48-generic
+Username=federicomegler
+Hostname=ubuntu
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=10/7/20, 6\:03 AM
