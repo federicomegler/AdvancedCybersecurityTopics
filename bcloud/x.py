@@ -2,7 +2,7 @@ from pwn import *
 import time
 
 context.terminal = ['tmux', 'splitw', '-h']
-r = process("./bcloud", env={"LD_PRELOAD":"'./libc-2.27.so'"})
+r = process("./bcloud", env={"LD_PRELOAD":"/home/federicomegler/libc-2.27.so"})
 gdb.attach(r, """b *0x08048804
 """)
 

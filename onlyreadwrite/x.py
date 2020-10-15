@@ -3,7 +3,7 @@ import time
 
 context.terminal = ['tmux', 'splitw', '-h']
 #r = process("./onlyreadwrite")
-r = remote("training.jinblack.it", 2006)
+r = remote("training.jinblack.it", 2005)
 #gdb.attach(r, """b main
 #""")
 
