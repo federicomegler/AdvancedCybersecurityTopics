@@ -1,12 +1,19 @@
-import z3
+from angr import *
+import claripy
+KEY_LENGTH = 29
 
-x = z3.Int("x")
-y = z3.Int("y")
-z = z3.Int("z")
+proj = Project('./prodkey')
+key = [claripy.BVS('c{}'.format(i),8) for i in range(KEY_LENGTH)]
+input_str = claripy.Concat(*key + [claripy.BVV(b'\n')])
+state = proj.factory.entry_state(stdin = input_str)
 
+for c in key:
+	state.solver.add(c >= 0x20, c <= 0x7e)
+	
+simgr = proj.factory.simgr(state)
 
-#z3.And(((x-0x30) == ((7-0x30) * 2 + 1))
-# , (7 < x-0x30)) ,  (x == (x - (z-0x30)) + 2)
+simgr.explore(find = 0x00400e58)
 
-
-print( 732 + 4 & 0x3)
+if simgr.found:
+	found = simgr.found[0]
+	print(found.posix.dumps(0))
