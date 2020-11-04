@@ -1,0 +1,8 @@
+check01 --> position 5, 11, 17, 23 are '-';
+
+check02 --> position  1, 4, 6, 9, 15, 18, 22, 27, 28   is a number;
+
+check03 --> [ position 4 number ] == [ (position 1 number)*2 +1 ] and 
+            [ position 4 number ] == [ (position 1 number)*2 +1 ]
+
+check04
