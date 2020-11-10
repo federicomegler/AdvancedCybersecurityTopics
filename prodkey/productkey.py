@@ -1,6 +1,8 @@
 from z3 import *
 import string
 
+#MEGLIO USARE UN BIT VECTOR
+
 c0 = z3.Int('c0')
 c1 = z3.Int('c1')
 c2 = z3.Int('c2')
@@ -65,22 +67,11 @@ def check08():
     return ((iVar2 + uVar1 & 3) - uVar1 == 1)
 
 
-#prova temporanea-----------------------------------------------------------------------
-
-#def check090():
-#    iVar2 = c15 - c28
-#    uVar1 = (iVar2 >> 0x1f) >> 0x1e
-#
-
 def check09():
     iVar2 = c15 - c28
     uVar1 = (z3.Int2BV(iVar2,8) >> 0x1f) >> 0x1e
     uVar2 = z3.Int2BV(iVar2, 8)
     return ((uVar2 + uVar1 & 3) - uVar1 == 1)
-
-
-
-#---------------------------------------------------------------------------------------
 
 
 def check0A():

