@@ -13,7 +13,7 @@ r.recv(105)
 
 time.sleep(0.2)
 
-canary = u64("\x00" + r.recv(7))
+canary = u64(b"\x00" + r.recv(7))
 
 time.sleep(0.2)
 
