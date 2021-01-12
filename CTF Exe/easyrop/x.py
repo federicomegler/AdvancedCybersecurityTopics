@@ -2,8 +2,8 @@ from pwn import *
 import time
 
 context.terminal = ['tmux','splitw','-h']
-r = remote("training.jinblack.it", 2015)
-#r = process("./easyrop")
+#r = remote("training.jinblack.it", 2015)
+r = process("./easyrop")
 #gdb.attach(r, """b *0x00400290
 #""")
 
